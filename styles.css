@@ -1,12 +1,12 @@
 :root {
-    /* Colors */
-    /* Primary */
-        --pale-blue: hsl(225, 100%, 94%);
-        --bright-blue: hsl(245, 75%, 52%);
-    /* Neutral */
-        --very-pale-blue: hsl(225, 100%, 98%);
-        --desaturated-blue: hsl(224, 23%, 55%);
-        --dark-blue: hsl(223, 47%, 23%);
+/* Colors */
+/* Primary */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+/* Neutral */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
 }
     
 * {
@@ -18,10 +18,18 @@ body {
     align-items: center;
     justify-items: center;
     background-color: var(--pale-blue);
+    background-image: url(/images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
     font-family: 'Red Hat Display', sans-serif;
     font-weight: 600;
     font-size: 16px;
     height: calc(100vh - 16px);
+}
+
+@media (min-width: 375px) {
+    body {
+        background-image: url(/images/pattern-background-desktop.svg);
+    }
 }
 
 p {
@@ -47,12 +55,13 @@ p > strong {
 }
 
 .card {
+    width: 330px;
+    margin: auto;
     display: flex;
     flex-flow: column;
     align-items: center;
     text-align: center;
     background-color: #fff;
-    width: 90%;
     border-radius: 30px;
     box-shadow: 0 10px 10px hsl(225, 100%, 90%);
 }
